@@ -31,6 +31,16 @@ toolkit:
     entry_file: step.sh
 
 inputs:
+  - devops_base_url: $AZURE_DEVOPS_BASE_URL
+    opts:
+      title: Azure DevOps Base URL
+      description: |
+        Azure DevOps Base URL.
+
+        The base URL of the repository. Cannot be empty.
+      is_sensitive: true
+      is_expand: true
+      is_required: true
   - devops_user: $AZURE_DEVOPS_USER
     opts:
       title: Azure DevOps user name
